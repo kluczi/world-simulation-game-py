@@ -1,4 +1,4 @@
-from Animal import Animal
+from src.Organisms.Animals.Animal import Animal
 import random
 
 class Antelope(Animal):

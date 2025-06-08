@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from Organism import Organism
-from Plant import Plant
+from src.Organisms.Plants.Plant import Plant
 
 class Animal(Organism, ABC):
     def __init__(self, strength, initiative, x, y, world, icon):

@@ -1,4 +1,4 @@
-from Animal import Animal
+from src.Organisms.Animals.Animal import Animal
 
 class Fox(Animal):
     def __init__(self, x, y, world):
