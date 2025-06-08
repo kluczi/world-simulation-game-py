@@ -1,8 +1,8 @@
-from src.Organisms.Animals.Animal import Animal
+from organisms.animals.animal import Animal
 
 class Sheep(Animal):
     def __init__(self, x, y, world):
         super().__init__(4, 4, x, y, world, "🐑")
 
-    def createChild(self, x, y):
+    def create_child(self, x, y):
         return Sheep(x, y, self._world)

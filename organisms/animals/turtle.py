@@ -1,4 +1,4 @@
-from src.Organisms.Animals.Animal import Animal
+from organisms.animals.animal import Animal
 import random
 
 class Turtle(Animal):
@@ -9,7 +9,9 @@ class Turtle(Animal):
 
     def action(self):
         if Turtle.__random.randint(0, 3) != 0:
-            self._world.addLog(f"{self.draw()} at ({self.getX()}, {self.getY()}) is lazy and stays on his position")
+            self._world.add_log(
+                f"{self.draw()} at ({self.get_x()}, {self.get_y()}) is lazy and stays"
+            )
             return
         super().action()
 
@@ -17,10 +19,13 @@ class Turtle(Animal):
         if isinstance(opponent, Turtle):
             super().collision(opponent)
             return
-        if opponent.getStrength() < 5:
-            self._world.addLog(f"{self.draw()} at ({self.getX()}, {self.getY()}) defends attack of {opponent.draw()} with strength {opponent.getStrength()}")
+        if opponent.get_strength() < 5:
+            self._world.add_log(
+                f"{self.draw()} at ({self.get_x()}, {self.get_y()}) defends attack of "
+                f"{opponent.draw()} (str {opponent.get_strength()})"
+            )
             return
         super().collision(opponent)
 
-    def createChild(self, x, y):
+    def create_child(self, x, y):
         return Turtle(x, y, self._world)

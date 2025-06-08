@@ -10,55 +10,56 @@ class Organism(ABC):
         self._icon = icon
         self._age = 0
         self._dead = False
-        self._lastReproductionTurn = -1
+        self._last_reproduction_turn = -1
+        self._world.add_organism(self)
 
     @abstractmethod
     def action(self):
         pass
 
     @abstractmethod
-    def collision(self, other):
+    def collision(self, opponent):
         pass
 
-    def getStrength(self):
+    def get_strength(self):
         return self._strength
 
-    def setStrength(self, strength):
+    def set_strength(self, strength):
         self._strength = strength
 
-    def getInitiative(self):
+    def get_initiative(self):
         return self._initiative
 
-    def getX(self):
+    def get_x(self):
         return self._x
 
-    def getY(self):
+    def get_y(self):
         return self._y
 
-    def setPosition(self, x, y):
+    def set_position(self, x, y):
         self._x = x
         self._y = y
 
-    def getWorld(self):
+    def get_world(self):
         return self._world
 
     def draw(self):
         return self._icon
 
-    def getAge(self):
+    def get_age(self):
         return self._age
 
-    def incrementAge(self):
+    def increment_age(self):
         self._age += 1
 
     def kill(self):
         self._dead = True
 
-    def isDead(self):
+    def is_dead(self):
         return self._dead
 
-    def getLastReproductionTurn(self):
-        return self._lastReproductionTurn
+    def get_last_reproduction_turn(self):
+        return self._last_reproduction_turn
 
-    def setLastReproductionTurn(self, turn):
-        self._lastReproductionTurn = turn
+    def set_last_reproduction_turn(self, turn):
+        self._last_reproduction_turn = turn
