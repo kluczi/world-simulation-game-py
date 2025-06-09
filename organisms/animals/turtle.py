@@ -5,7 +5,7 @@ class Turtle(Animal):
     __random = random.Random()
 
     def __init__(self, x, y, world):
-        super().__init__(2, 1, x, y, world, "🐢")
+        super().__init__(2, 1, x, y, world, "Turtle")
 
     def action(self):
         if Turtle.__random.randint(0, 3) != 0:

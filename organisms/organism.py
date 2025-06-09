@@ -1,13 +1,13 @@
 from abc import ABC, abstractmethod
 
 class Organism(ABC):
-    def __init__(self, strength, initiative, x, y, world, icon):
+    def __init__(self, strength, initiative, x, y, world, name):
         self._strength = strength
         self._initiative = initiative
         self._x = x
         self._y = y
         self._world = world
-        self._icon = icon
+        self._name = name
         self._age = 0
         self._dead = False
         self._last_reproduction_turn = -1
@@ -40,11 +40,8 @@ class Organism(ABC):
         self._x = x
         self._y = y
 
-    def get_world(self):
-        return self._world
-
     def draw(self):
-        return self._icon
+        return self._name
 
     def get_age(self):
         return self._age

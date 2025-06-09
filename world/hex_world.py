@@ -9,7 +9,7 @@ class HexWorld(World):
     def random_field(self, x, y):
         even_dirs = [(1, 0), (0, -1), (-1, 0), (0, 1), (-1, 1), (1, 1)]
         odd_dirs  = [(1, 0), (1, -1), (0, -1), (-1, 0), (0, 1), (1, 1)]
-        directions = even_dirs if (y % 2 == 0) else odd_dirs
+        directions = even_dirs if (x % 2 == 0) else odd_dirs
         neighbors = [(x + dx, y + dy) for dx, dy in directions]
         self.__random.shuffle(neighbors)
         for nx, ny in neighbors:

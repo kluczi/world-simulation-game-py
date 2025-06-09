@@ -2,7 +2,7 @@ from organisms.plants.plant import Plant
 
 class Nightshade(Plant):
     def __init__(self, x, y, world):
-        super().__init__(99, x, y, world, "🍄")
+        super().__init__(99, x, y, world, "Nightshade")
 
     def collision(self, opponent):
         self._world.add_log(

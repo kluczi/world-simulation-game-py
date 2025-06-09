@@ -2,7 +2,7 @@ from organisms.plants.plant import Plant
 
 class Dandelion(Plant):
     def __init__(self, x, y, world):
-        super().__init__(0, x, y, world, "🌼")
+        super().__init__(0, x, y, world, "Dandelion")
 
     def action(self):
         for _ in range(3):

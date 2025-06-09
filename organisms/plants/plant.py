@@ -5,8 +5,8 @@ import random
 class Plant(Organism, ABC):
     __random = random.Random()
 
-    def __init__(self, strength, x, y, world, icon):
-        super().__init__(strength, 0, x, y, world, icon)
+    def __init__(self, strength, x, y, world, name):
+        super().__init__(strength, 0, x, y, world, name)
 
     def action(self):
         if Plant.__random.randint(0, 9) == 0:

@@ -2,7 +2,7 @@ from organisms.animals.animal import Animal
 
 class Fox(Animal):
     def __init__(self, x, y, world):
-        super().__init__(3, 7, x, y, world, "🦊")
+        super().__init__(3, 7, x, y, world, "Fox")
 
     def action(self):
         moved = False
