@@ -33,7 +33,6 @@ class CyberSheep(Animal):
             self.collision(occupant)
 
     def collision(self, opponent):
-        from organisms.plants.sosnowsky_hogweed import SosnowskyHogweed
         if isinstance(opponent, SosnowskyHogweed):
             self._world.add_log(f"{self.draw()} eats {opponent.draw()} at ({opponent.get_x()},{opponent.get_y()})")
             opponent.kill()
